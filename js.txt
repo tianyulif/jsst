@@ -4,10 +4,25 @@
   innerHTML写入html元素中
   Console.log写入浏览器的控制台
 2.JS语法
-   数字Number 3.14  4500 123e5
-   字符串String  "Hello World" 'Hello World'
+   数字Number 3.14  4500 123e5。
+   字符串String  "Hello World" 'Hello World'。
    布尔（逻辑）只能有两个值：true 或 false。
-   数组Array  [40, 100, 1, 5, 25, 10]
-   对象Object  {name:"jack",age:25}
    null和undefined
    变量 var a = "name" 对大小写敏感
+   数组Array  [40, 100, 1, 5, 25, 10],js中数组类似于java中的map容器 长度可以任意改变，元素类型任意
+   var result = arr.push(1,2,true) push方法向数组追加元素，返回新数组的长度，arr.pop从数组尾部移除一个值，返回移除的元素，
+   arr.shift()从头部移除一个元素，arr.unshift(10,false)从头部插入2个元素，返回的新数组的长度
+   arr.splice(1,2,3,4,5)从第一位截取2位，然后添加后面参数，var str = arr.slice(2,4) 从数组截取从第2位截取2，3两位，slice不改变数组本身
+   var result = arr1.concat(arr2),result合并两个数组，但是不操作数组本身，arr.join('-')在数组每个元素中加入，不操作数组本身
+   arr.sort()按照字符串码排序，arr.reverse()按照数值位置倒序排序，中间可以加比较方法  arr.sort(compare)和arr.reverse(compare)
+   function compare(value1,value2){
+        if(value1<value2){
+          return 1;
+        }else if((value1>value2)){
+          return -1;
+        }else{
+          return 0;
+        }
+      }
+    var index = arr.index(2,2)从第二位查值为2的位置，值是通过===比较，没有转换ture<>1；arr.lastIndexOf();
+   对象Object  {name:"jack",age:25}
