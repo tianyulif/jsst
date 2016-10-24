@@ -26,3 +26,6 @@
       }
     var index = arr.index(2,2)从第二位查值为2的位置，值是通过===比较，没有转换ture<>1；arr.lastIndexOf();
    对象Object  {name:"jack",age:25}
+
+
+   JavaScript把null、undefined、0、NaN和空字符串''视为false，其他值一概视为true，因此上述代码条件判断的结果是true。
