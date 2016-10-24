@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+           function  abs(x){
+               if(typeof x !== 'number')
+                       throw  'not a number';
+               if(x>=0){
+                   return x;
+               }else {
+                   return -x;
+               }
+           }
+        //  alert(abs(-111));
+
+        function foo (x) {
+            alert(x);
+            var b=x+x+x;
+            return b;
+        }
+           function foo1 (x) {
+               alert(x);
+               var b=0;
+               for(var i=0;i<arguments.length;i++){
+                   b=b+arguments[i];
+               }
+               return b;
+           }
+         //  alert(foo(10,20,30)); //10+10+10=30
+           alert(foo1(10,20,30)); //10,60
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
