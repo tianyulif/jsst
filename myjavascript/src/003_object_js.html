@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="utf-8">
+        var obj ={};
+        obj.name ='zhangsan';
+        obj.age=20;
+        obj['brithday']='1986-01-01';
+        obj.say = function () {
+            alert('hello');
+        };
+        obj.say();
+        for(var key in obj){
+            if(obj.hasOwnProperty(key)){
+                alert(obj[key]);
+            }
+        }
+       // delete  obj.age;
+        //constructor
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
