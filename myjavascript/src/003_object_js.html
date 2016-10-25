@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script type="text/javascript" charset="utf-8">
-        var obj ={};
+        /*var obj ={};
         obj.name ='zhangsan';
         obj.age=20;
         obj['brithday']='1986-01-01';
@@ -16,9 +16,48 @@
             if(obj.hasOwnProperty(key)){
                 alert(obj[key]);
             }
-        }
+        }*/
        // delete  obj.age;
         //constructor
+
+        function map () {
+            var keys = new Array();
+            var data = new Object();
+            this.put = function (key, value) {
+                if( data[key]==null){
+                    keys.push(key);
+                    data[key] = value;
+                }else{
+                    data[key] = value;
+                }
+
+            };
+            this.get = function (key) {
+                if (data.hasOwnProperty(key)){
+                        return data[key];
+                }else{
+                    return "not a key";
+                }
+            };
+            this.size = function () {
+                return  keys.length;
+            };
+            this.isEmpty = function () {
+               return keys.length==0;
+            };
+            this.contains = function (key) {
+                
+            };
+        }
+
+        var m = new map();
+        m.put('name','xiaoming');
+        m.put('age',18);
+
+        alert(m.get('11'))
+        alert(m.size());
+        alert(m.isEmpty());
+        
 
     </script>
 </head>
