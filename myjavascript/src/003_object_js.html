@@ -46,17 +46,35 @@
                return keys.length==0;
             };
             this.contains = function (key) {
-                
+                return keys.indexOf(key)!=-1;
             };
+            this.each = function (fn) {
+                for(var i=0;i<keys.length;i++){
+                    fn(keys[i],data[keys[i]]);
+                }
+            }
+            this.toString = function (){
+                var str ="{";
+                for(var i=0;i<keys.length;i++){
+                    str=str+"\""+keys[i]+"\""+"\:"+"\""+data[keys[i]]+"\""+"\,";
+                }
+                str = str.substring(0,str.length - 1) ;
+                str=str+"}";
+                return str;
+            }
         }
 
         var m = new map();
         m.put('name','xiaoming');
         m.put('age',18);
 
-        alert(m.get('11'))
-        alert(m.size());
-        alert(m.isEmpty());
+       // alert(m.get('11'))
+      //  alert(m.size());
+      //  alert(m.isEmpty());
+        alert(m.toString());
+        m.each(function (key,value) {
+            alert(key+" : "+value);
+        });
         
 
     </script>
