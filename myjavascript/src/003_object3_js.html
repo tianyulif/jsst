@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+       var url = 'http://www.baidu.com';
+        var str1 = encodeURI(url);                //decodeURI()
+        var str2 = encodeURIComponent(url);    //decodeURIComponent()
+        alert(str1+"\n"+str2);
+
+        //eval(String)方法 无形的JavaScript解析器
+        var str3 = "var a=10;var b=20;";
+       eval(str3);
+        alert(a+b); //30
+        //数组字符串，直接使用eval(Stringarr)
+        //对象转换
+        var obj = "{name:'z3',age:20}";
+        eval("("+obj+")");
+        //parseFloat(str)   parseInt(str)
+        //escape(str) unescape(str)  转码
+
+        //isNaN(number) not a number   var a = '10' false
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

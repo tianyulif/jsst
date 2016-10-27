@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+        var arr = [2,6,5,3,6,9,12,6,2,7];
+       // 数组去重
+        alert(arr);
+
+        //方法1
+        /*for(var i=0;i<arr.length;i++){
+           while(arr.lastIndexOf(arr[i])>i){
+               arr.splice(arr.lastIndexOf(arr[i]),1);
+           }
+        }*/
+
+        //方法2
+        var obj ={};
+        for(var i=0;i<arr.length;i++){
+            obj[arr[i]]=true;
+        }
+        var j = 0;
+        var arr1=[];
+        for(var key in obj){
+            if(obj.hasOwnProperty(key)){
+                arr1.push(key);
+            }
+
+        }
+
+        alert(arr1); //2,6,5,3,9,12,7
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

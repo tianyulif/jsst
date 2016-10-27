@@ -26,6 +26,8 @@
       }
     var index = arr.index(2,2)从第二位查值为2的位置，值是通过===比较，没有转换ture<>1；arr.lastIndexOf();
    对象Object  {name:"jack",age:25}
-
+   Global 全局的，终极的对象(不存在)
+   eval(String)方法 无形的JavaScript解析器
+   isNaN(number) not a number，自己不等于自己
 
    JavaScript把null、undefined、0、NaN和空字符串''视为false，其他值一概视为true，因此上述代码条件判断的结果是true。

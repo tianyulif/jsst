@@ -31,27 +31,31 @@
                     data[key] = value;
                 }
 
-            };
+            }
             this.get = function (key) {
                 if (data.hasOwnProperty(key)){
                         return data[key];
                 }else{
                     return "not a key";
                 }
-            };
+            }
             this.size = function () {
                 return  keys.length;
-            };
+            }
             this.isEmpty = function () {
                return keys.length==0;
-            };
+            }
             this.contains = function (key) {
                 return keys.indexOf(key)!=-1;
-            };
+            }
             this.each = function (fn) {
                 for(var i=0;i<keys.length;i++){
                     fn(keys[i],data[keys[i]]);
                 }
+            }
+            this.remove = function (key) {
+                delete data[key];
+                keys.splice(keys.indexOf(key),1);
             }
             this.toString = function (){
                 var str ="{";
@@ -67,14 +71,19 @@
         var m = new map();
         m.put('name','xiaoming');
         m.put('age',18);
+        m.put('birth','1986-01-01');
+        m.put('city','shanghai');
 
        // alert(m.get('11'))
       //  alert(m.size());
       //  alert(m.isEmpty());
         alert(m.toString());
-        m.each(function (key,value) {
+        m.remove("birth");
+        alert(m.toString());
+      /*  m.each(function (key,value) {
             alert(key+" : "+value);
-        });
+        });*/
+
         
 
     </script>
