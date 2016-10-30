@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+        //call apply 简单用法绑定函数 用于传递参数 调用
+     /*   function sum(x,y) {
+            return x+y;
+        }
+        function  call1(num1,num2) {
+            return sum.call(this,num1,num2);
+        }
+
+        function apply1(num1,num2) {
+            return sum.apply(this,[num1,num2]);
+        }
+
+        alert(call1(10,20));// alert(apply1(10,20)); 30*/
+
+        //扩充作用域
+     /*   window.color='red';
+        var obj={color:'blue'};
+        function showColor() {
+            alert(this.color);
+        }
+        showColor.call(window);
+        showColor.call(obj);*/
+
+
+        (function() {alert('我直接执行了。。。')})();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -29,5 +29,13 @@
    Global 全局的，终极的对象(不存在)
    eval(String)方法 无形的JavaScript解析器
    isNaN(number) not a number，自己不等于自己
-
    JavaScript把null、undefined、0、NaN和空字符串''视为false，其他值一概视为true，因此上述代码条件判断的结果是true。
+3.JS函数
+   函数也是一种类型，函数可以当做一种数据类型来传递
+   三种函数定义方式-function语句形式 函数直接量形式  通过function构造函数去定义
+   fn.length 形参的个数，arguments函数的参数数组，arguments.callee指的函数本身，多用于递归操作
+   this对象是在运行时基于执行环境所绑定的，this总是指向调用者，谁调用指向谁
+   call，apply扩充函数的作用域，这样对象不需要和方法有耦合关系 函数大写对应一个对象
+   JS没有块级作用域
+   闭包：一个函数可以访问另外一个函数的作用域的变量
+

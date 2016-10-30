@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+      /*  function test (a,b) {
+            return a+b;
+        }
+        alert(typeof test());//number
+        alert(typeof  test);//function*/
+
+        //匿名函数
+        /*function  test (aa) {
+            aa();
+        }
+        test(function () {
+            alert('111')
+        })*/
+
+        //3种函数定义方式
+      //1 .function 语句
+        function test1() {
+           // alert("");
+        }
+        //2.函数直接量ECMA
+        var test2 = function () {
+          //  alert("");
+        }
+        //3函数构造式
+        var test3 = new Function ("a","b","return a+b;") ;
+
+        function  test4 (a,b,c,d,e) {
+            alert(test4.length);
+            alert(arguments.length);
+        }
+        test4(1,2,3,4);
+
+        function fact(num) {
+            if(num<1) {
+                return 1;
+            }else{
+                return num*fact(num-1); //num*arguments.callee(num-1);
+            }
+        }
+
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
