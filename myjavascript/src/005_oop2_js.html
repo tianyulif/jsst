@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+        function foo(a,b,c) {
+            return a*b*c;
+        }
+        /*alert(foo.length);
+        alert(typeof foo.constructor);
+        alert(typeof foo.call);
+        alert(typeof foo.apply);
+        alert(typeof foo.prototype);*/
+
+        function Person(name,gender) {
+            this.name = name;
+            this.gender = gender;
+            this.say = function () {
+                var res = "I'm "+ this.name + " and I'm a "+ this.gender+".";
+                return res;
+            }
+        }
+
+        Person.prototype.age = 24;
+        Person.prototype.getAge = function () {
+            return this.age;
+        }
+        flag = true;
+        if(flag){
+            var fun = new Person('tower','male');
+            alert(fun.name);
+            alert(fun.age);
+            alert(fun.getAge());
+            alert(fun.say());
+        }
+
+        Person.prototype.salary  = 10000;
+        Person.prototype.getSalary = function () {
+            return this.name + " can earn about "+ this.salary + " each month .";
+        }
+
+        if(flag){
+            alert(fun.salary);
+            alert(fun.getSalary());
+        }
+
+        Person.school = "ISCAS";
+        Person.say = function () {
+            return "zhitao";
+        }
+        if (flag)
+        {
+            alert(Person.school);//ISCAS
+            alert(fun.school);//输出的是 "undefined" 静态
+            alert(Person.say()); //输出 zhutao
+            alert(fun.say()); // I'm Tower and I'm a male.
+        }
+        Person.prototype.getSalary = function(){
+            return "I can earn 1000000 USD";
+        }
+        if (flag)
+        {
+            alert(fun.getSalary());//已经继承了改变, 即所谓的 动态
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

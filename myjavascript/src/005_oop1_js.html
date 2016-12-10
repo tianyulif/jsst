@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+        function Person(name,age) {
+            this.name = name ;
+            this.age = age;
+            this.say= function () {
+                alert('hello,'+this.name);
+            }
+        }
+        function Student(num,sex) {
+            this.num = num;
+            this.sex = sex;
+            this.say = function () {
+                alert('hello,'+this.name+',your num is:'+num);
+            }
+        }
+        Student.prototype = new Person('z3',20);
+        var std1 = new Student(1,'M');
+        std1.say();
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
