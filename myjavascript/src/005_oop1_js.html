@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" charset="UTF-8">
+       /* var obj = new Object();
+        obj.name = 'z3';
+        obj.sex = '男';
+        obj.sayName = function () {
+            alert('我是张三！')
+        }*/
+        //第一种工厂方式
+        function createPerson(name,age) {
+            var obj = new Object();
+            obj.name = name;
+            obj.age = age;
+            obj.say= function () {
+                alert(obj.name);
+            }
+        }
+
+       //构造函数
+        function Person(name,age){
+            this.name = name;
+            this.age = age;
+            this.say = function () {
+                alert(this.name);
+            }
+        }
+        //prototype
+        function Person1() {
+            this.say = function () {
+                alert(this.name);
+            }
+        };
+       Person1.prototype.name = 'z3';
+        Person1.prototype.age=20;
+       
+    </script>
+</head>
+<body>
+
+</body>
+</html>
