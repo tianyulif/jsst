@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clock</title>
+    <script type="text/javascript" charset="utf-8">
+        function displayTime() {
+            var elt = document.getElementById("clock");
+            alert("tagName="+elt.tagName);
+            var now = new Date();
+            elt.innerHTML = now.toLocaleTimeString();
+            setTimeout(displayTime,1000);
+        }
+        window.onload = displayTime;
+        //alert(window.location);
+        //alert(window.navigator.appVersion+","+navigator.platform+","+navigator.product+","+navigator.geolocation);
+        //alert(screen.height+"---"+screen.width);
+        alert(document.getElementById("clock").tagName);
+    </script>
+    <style>
+        #clock{
+            font: bold 24px scans;
+            background: #ddf;
+            padding: 10px;
+            border: solid black 2px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digital  Clock</h1>
+    <span id="clock">1111</span>
+    <a href="javascript:new Date().toLocaleTimeString();">what time is it?</a>
+
+</body>
+</html>

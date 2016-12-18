@@ -6,7 +6,7 @@
     <script type="text/javascript" charset="utf-8">
         function  Base() {
             this.id = 'base';
-            alert(this.id);
+         //   alert(this.id);
         }
      /*   var obj = {};
         obj.__proto__=Base.prototype;
@@ -20,8 +20,68 @@
             return this.id === id;
         }
         var newObj = new Derive('derive');
-        alert(Derive.prototype)
+      //  alert(Derive.prototype);
 
+
+       function factorial(n){
+            if(isFinite(n)&& n>0 && n==Math.round(n)){
+               if(!(n in factorial)){
+                   factorial[n] = n * factorial(n-1);
+               }
+                return factorial[n];
+            }else{
+                return NaN;
+            }
+        }
+        factorial[1] = 1;
+      //  alert(factorial(3));
+
+        // 计算阶乘，并将结果缓存至函数的属性中
+      /*  function factorial(n) {
+            if (isFinite(n) && n>0 && n==Math.round(n)) {
+                if(!(n in factorial))                          // 如果没有缓存结果
+                    factorial[n] = n * factorial(n-1);         // 计算结果并缓存之
+                return factorial[n];                           // 返回缓存结果
+            }
+            else  return NaN;         // 如果输入有误
+        }
+        factorial[1] = 1;       // 初始化缓存以保存这种基本情况*/
+
+       // alert(factorial(3));
+
+
+
+        function fun(n) {
+            if(n==1)
+                    return 1;
+            if(n<5){
+                n = n*fun(n-1);
+           // return n;
+            }else{
+                return n;
+            }
+        }
+
+
+       // alert(fun(4));
+        var scope = "global scope";
+        function checkScope() {
+            var scope = "local scope";
+            function f() {
+                return scope;
+            }
+            return f;
+        }
+      //  alert(checkScope()());
+       var bb = new Function();
+        var aa = new Object();
+        alert("Object prototype:"+Object.prototype);
+        alert("Object __proto__:"+aa.__proto__);
+        alert("Function prototype:"+Function.prototype);
+        alert("Function __proto__:"+bb.__proto__);
+        alert("checkScope prototype:"+checkScope.prototype);
+        alert("checkScope __proto__:"+checkScope.__proto__);
+        //window.location= 'www.baidu.com';
     </script>
 </head>
 <body>
